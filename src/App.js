@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import { CardList } from './components/card-list/card-list.component';
-import './App.css';
+import React, { Component } from "react";
+import { CardList } from "./components/card-list/card-list.component";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -25,9 +25,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(users => this.setState({ profiles: users }));
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(response => response.json())
+      .then(users => this.setState({ profiles: users }));
   }
 
   render() {

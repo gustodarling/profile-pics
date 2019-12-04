@@ -1,10 +1,11 @@
-import React from 'react';
-import './card-list.component.css';
+import React from "react";
+import { Card } from "../card/card.component";
+import "./card-list.component.css";
 
 export const CardList = props => (
-  <div className='card-list'>
+  <div className="card-list">
     {props.profiles.map(profile => (
-      <h1 key={profile.id}> {profile.name} </h1>
+      <Card key={profile.id} profile={profile} />
     ))}
   </div>
 );
